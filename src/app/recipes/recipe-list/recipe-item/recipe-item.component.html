@@ -1,0 +1,26 @@
+<div class="card rounded-4"
+     style="max-height:379px; min-height:200px; min-width: 150px;"
+     [routerLink]="[index]"
+     routerLinkActive="active">
+  <img [src]="recipe.imagePath"
+       alt="{{ recipe.name }}"
+       class="zoomed-image card-img-top img-fluid rounded-top-4">
+  <div class="card-body">
+    <h5 class="card-title fs-6">{{ recipe.name }}</h5>
+    <p class="card-text ellipsis"
+       *ngIf="!showFullDescription">{{ recipe.description }}</p>
+    <!-- <p class="card-text"
+      *ngIf="showFullDescription">{{ recipe.description }}</p>
+      <a class="read-more"
+      *ngIf="recipe.description.length > maxDescriptionLength"
+      (click)="toggleDescription(recipe)">
+      {{ showFullDescription ? 'Read Less' : 'Read More' }}
+    </a> -->
+
+    <ul class="list-group my-2">
+      <button type="button"
+              class="btn btn-primary"
+              (click)="addToShoppingList()">Add to Cart</button>
+    </ul>
+  </div>
+</div>

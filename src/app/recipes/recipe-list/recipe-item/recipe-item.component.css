@@ -1,0 +1,24 @@
+.read-more {
+  color: #007bff; /* Bootstrap primary color */
+  cursor: pointer;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.zoomed-image {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+}
+/* Apply styles to the active link or div */
+.active {
+  border-color: #007bff; /* Change this to your desired background color */
+ /* color: #ffffff; /* Change this to your desired text color */
+  /* Add any additional styles as needed */
+ /* .btn {   
+    color: #007bff;
+    background-color: #ffffff;
+  }*/
+}

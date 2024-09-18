@@ -1,0 +1,21 @@
+.loader {
+  border: 4px solid transparent;
+  border-top-color: orange; /* Change the first color as needed */
+  border-bottom-color: #f4c360; /* Change the second color as needed */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+  margin-top: 50vh;
+  margin-bottom: 50vh;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-10">
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+    <ul class="list-group ">
+      @for(ingredient of ingredients; track ingredient){
+      <div class="list-group-item"
+           style="cursor: pointer"
+           appBetterHighlight="var( --custom-primary)"
+           (click)="onEditItem(ingredient)">
+        {{ingredient.name}} ({{ingredient.amount}})
+      </div>
+      } @empty {
+      <a href=""
+         class="list-group-item"
+         style="cursor: pointer">
+        There are no items.
+      </a>
+      }
+    </ul>
+  </div>
+</div>

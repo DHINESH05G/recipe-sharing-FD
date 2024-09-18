@@ -1,0 +1,51 @@
+<div class="row mx-2 my-4">
+  <h1>{{recipe.name}}</h1>
+  <div class="col-12">
+  </div>
+  <div class="my-2"> <img [src]="recipe.imagePath"
+         alt="{{ recipe.name }}"
+         class="zoomed-image card-img-top img-fluid rounded-2">
+  </div>
+  <div class="col-12 mt-2">
+    {{recipe.description}}
+  </div>
+
+  <div class="col-12 my-2">
+    <ul class="list-group">
+      <li class="list-group-item"
+      *ngFor="let ingredient of recipe.ingredients">
+      {{ingredient.name}} - ({{ingredient.amount}})
+      </li>
+    </ul>
+  </div>
+  <div class="my-2">
+    <div class="btn-group"
+         role="group"
+         appDropdown
+         #r="appDropdown">
+      <button type="button"
+              class="btn btn-primary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
+        Manage Recipe
+        <span class="caret"></span>
+      </button>
+      <div [ngClass]="{'show': r.isOpen}"
+           class="dropdown-menu my-lg-5"
+           aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item"
+           style="cursor: pointer;"
+           (click)="onAddToShoppingList()"
+           appBetterHighlight="var( --custom-primary)">To shopping list</a>
+        <a class="dropdown-item"
+           style="cursor: pointer;"
+           appBetterHighlight="var( --custom-primary)" (click)="onEditRecipe()">Edit Recipe</a>
+        <a class="dropdown-item"
+           style="cursor: pointer;"
+           appBetterHighlight="var( --custom-primary)" (click)="onDeleteRecipe()">Delete Recipe</a>
+      </div>
+    </div>
+  </div>
+
+</div>
