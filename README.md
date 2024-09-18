@@ -47,6 +47,10 @@ Run `ng e2e`  You need to first add a package that implements end-to-end testing
 
 For more help on using Angular CLI, you can utilize the following command:
 
+
+Node_module not add in file is too large.
+
+
 Run `ng help` or Additionally, you can visit the [Angular CLI Overview and Command Reference](https://angular.io/cli) page for comprehensive documentation.
 
 Thank you for using Recipe Book Angular! Happy coding and cooking with Angular! 🍳👩‍🍳👨‍🍳
